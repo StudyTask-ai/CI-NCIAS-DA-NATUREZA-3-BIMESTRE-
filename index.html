@@ -85,6 +85,33 @@
             justify-content: center;
         }
         
+        .button.small {
+            padding: 10px 20px;
+            font-size: 0.9em;
+        }
+        
+        .button.medium {
+            padding: 20px 40px;
+            font-size: 1.1em;
+        }
+        
+        .button.large {
+            padding: 30px 60px;
+            font-size: 1.3em;
+        }
+        
+        .button.narrow {
+            max-width: 150px;
+        }
+        
+        .button.normal {
+            max-width: 250px;
+        }
+        
+        .button.wide {
+            max-width: 350px;
+        }
+
         .button img {
             margin-right: 10px;
             width: 30px;
@@ -132,6 +159,49 @@
             max-height: 80vh;
         }
         
+        .color-slider {
+            display: flex;
+            overflow-x: auto;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .color-slider input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .color-slider input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .close-button {
+            align-self: flex-end;
+            font-size: 1em;
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        
+        .close-button:hover {
+            color: #ff7e5f;
+            transform: scale(1.1);
+        }
+        
         .apply-button {
             margin-top: 10px;
             padding: 10px 20px;
@@ -147,6 +217,28 @@
         .apply-button:hover {
             background-color: #6f29c6;
             transform: translateY(-2px);
+        }
+        
+        .theme-button {
+            margin: 5px;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .theme-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background-color: #444;
         }
 
         @media (max-width: 600px) {
@@ -178,31 +270,32 @@
         </select>
 
         <div class="buttons-wrapper">
-            <button class="button" data-month="09" onclick="window.location.href='https://studytask-ai.github.io/11-09-CI-NCIAS-DA-NATUREZA-/'">
+            <!-- Botões organizados da atividade mais recente para a mais antiga -->
+            <button class="button medium normal" data-month="09" onclick="window.location.href='https://studytask-ai.github.io/11-09-CI-NCIAS-DA-NATUREZA-/'">
                 11/09 - Ciências da Natureza
             </button>
-            <button class="button" data-month="09" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/0409-ci%C3%AAncias-da-natureza?authuser=0'">
+            <button class="button medium normal" data-month="09" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/0409-ci%C3%AAncias-da-natureza?authuser=0'">
                 04/09 - Ciências da Natureza
             </button>
-            <button class="button" data-month="08" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/ci%C3%AAncias-da-natureza-2308-prof-aline?authuser=0'">
+            <button class="button medium normal" data-month="08" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/ci%C3%AAncias-da-natureza-2308-prof-aline?authuser=0'">
                 23/08 - Ciências da Natureza
             </button>
-            <button class="button" data-month="08" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/2108-ci%C3%AAncias-da-natureza?authuser=0'">
+            <button class="button medium normal" data-month="08" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/2108-ci%C3%AAncias-da-natureza?authuser=0'">
                 21/08 - Ciências da Natureza
             </button>
-            <button class="button" data-month="08" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/0908-continua%C3%A7%C3%A3o-sistema-digest%C3%B3rio?authuser=0'">
+            <button class="button medium normal" data-month="08" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/0908-continua%C3%A7%C3%A3o-sistema-digest%C3%B3rio?authuser=0'">
                 09/08 - Continuação Sistema Digestório
             </button>
-            <button class="button" data-month="08" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/0708-sistema-digest%C3%B3rio?authuser=0'">
+            <button class="button medium normal" data-month="08" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/0708-sistema-digest%C3%B3rio?authuser=0'">
                 07/08 - Sistema Digestório
             </button>
-            <button class="button" data-month="07" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/ci%C3%AAncias-da-natureza-3107?authuser=0'">
+            <button class="button medium normal" data-month="07" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/ci%C3%AAncias-da-natureza-3107?authuser=0'">
                 31/07 - Ciências da Natureza
             </button>
-            <button class="button" data-month="06" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/ci%C3%AAncias-da-natureza-140624?authuser=0'">
+            <button class="button medium normal" data-month="06" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/ci%C3%AAncias-da-natureza-140624?authuser=0'">
                 14/06 - Ciências da Natureza
             </button>
-            <button class="button" data-month="06" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/1206-ci%C3%AAncias-da-natureza?authuser=0'">
+            <button class="button medium normal" data-month="06" onclick="window.location.href='https://sites.google.com/view/cpiadestudytask/1206-ci%C3%AAncias-da-natureza?authuser=0'">
                 12/06 - Ciências da Natureza
             </button>
         </div>
@@ -211,14 +304,82 @@
     </div>
 
     <div class="theme-options" id="themeOptions">
-        <button class="apply-button" onclick="applyHueColor()">Aplicar Cor Personalizada</button>
+        <button class="close-button" onclick="toggleThemeOptions()">Fechar Configurações</button>
+        <div class="config-section">
+            <h2>Personalizar Tema</h2>
+            <div class="color-slider">
+                <input type="range" min="0" max="360" value="0" id="hueRange">
+            </div>
+            <button class="apply-button" onclick="applyHueColor()">Aplicar Cor Personalizada</button>
+            <button class="apply-button" onclick="activateExtremeBlack()">Ativar Tema Extremamente Preto</button>
+        </div>
+        
+        <div class="config-section">
+            <h2>Configurações de Tamanho dos Botões</h2>
+            <button class="theme-button" onclick="setButtonSize('small')">Pequeno</button>
+            <button class="theme-button" onclick="setButtonSize('medium')">Médio</button>
+            <button class="theme-button" onclick="setButtonSize('large')">Grande</button>
+        </div>
+
+        <div class="config-section">
+            <h2>Configurações de Largura dos Botões</h2>
+            <button class="theme-button" onclick="setButtonWidth('narrow')">Estreito</button>
+            <button class="theme-button" onclick="setButtonWidth('normal')">Normal</button>
+            <button class="theme-button" onclick="setButtonWidth('wide')">Largo</button>
+        </div>
     </div>
 
     <script>
+        const themeOptions = document.getElementById('themeOptions');
+        const hueRange = document.getElementById('hueRange');
+
         function toggleThemeOptions() {
-            const themeOptions = document.getElementById('themeOptions');
             themeOptions.style.display = themeOptions.style.display === 'flex' ? 'none' : 'flex';
             document.body.style.overflow = themeOptions.style.display === 'flex' ? 'hidden' : 'auto';
+        }
+
+        function applyHueColor() {
+            const hueValue = hueRange.value;
+            const bgColor = `hsl(${hueValue}, 100%, 50%)`;
+            const textColor = `hsl(${hueValue}, 100%, 20%)`;
+            setTheme(bgColor, textColor);
+        }
+
+        function activateExtremeBlack() {
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                button.style.color = '#8533f1'; // Define a cor do texto dos botões como roxo
+            });
+            setTheme('#000000', '#8533f1'); // Fundo preto e texto roxo
+        }
+
+        function setTheme(bgColor, textColor) {
+            document.body.style.backgroundColor = bgColor;
+            document.body.style.color = textColor;
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                button.style.backgroundColor = '#ffffff';
+                button.style.color = textColor;
+            });
+            localStorage.setItem('theme', JSON.stringify({ bgColor, textColor }));
+        }
+
+        function setButtonSize(size) {
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                button.classList.remove('small', 'medium', 'large');
+                button.classList.add(size);
+            });
+            localStorage.setItem('buttonSize', size);
+        }
+
+        function setButtonWidth(width) {
+            const buttons = document.querySelectorAll('.button');
+            buttons.forEach(button => {
+                button.classList.remove('narrow', 'normal', 'wide');
+                button.classList.add(width);
+            });
+            localStorage.setItem('buttonWidth', width);
         }
 
         function filterByMonth(month) {
@@ -230,6 +391,42 @@
                     button.style.display = 'none';
                 }
             });
+        }
+
+        window.onload = () => {
+            applyStoredTheme();
+            applyStoredButtonSize();
+            applyStoredButtonWidth();
+        };
+
+        function applyStoredTheme() {
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                const { bgColor, textColor } = JSON.parse(storedTheme);
+                setTheme(bgColor, textColor);
+            }
+        }
+
+        function applyStoredButtonSize() {
+            const storedSize = localStorage.getItem('buttonSize');
+            if (storedSize) {
+                const buttons = document.querySelectorAll('.button');
+                buttons.forEach(button => {
+                    button.classList.remove('small', 'medium', 'large');
+                    button.classList.add(storedSize);
+                });
+            }
+        }
+
+        function applyStoredButtonWidth() {
+            const storedWidth = localStorage.getItem('buttonWidth');
+            if (storedWidth) {
+                const buttons = document.querySelectorAll('.button');
+                buttons.forEach(button => {
+                    button.classList.remove('narrow', 'normal', 'wide');
+                    button.classList.add(storedWidth);
+                });
+            }
         }
     </script>
 </body>
